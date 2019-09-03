@@ -144,6 +144,7 @@ var afficheLesValeurDuTableau = (function(){
         }
     }
 }());
+
 afficheLesValeurDuTableau();
 afficheLesValeurDuTableau();
 afficheLesValeurDuTableau();
