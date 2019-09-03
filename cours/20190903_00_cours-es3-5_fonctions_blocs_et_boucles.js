@@ -149,3 +149,20 @@ afficheLesValeurDuTableau();
 afficheLesValeurDuTableau();
 afficheLesValeurDuTableau();
 
+// Exemple de déclarations.
+// Se terminent toujours par un ;
+var titi1 = 10;
+var titi2 = "un texte";
+var titi3 = [];
+var titi4 = function(){};
+
+var titi5 = titi4();
+
+if (titi1) {
+    alert('hello');
+} else if(condition) {
+    alert('bye');
+} else {
+    alert('tag');
+}
+
