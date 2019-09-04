@@ -4,7 +4,7 @@ var monObjet = {
     },
     r: true,
     t: "Ceci est un texte dans un objet"
-  };
+};
 
 var monAutreObjet = {
     e: [function(){
