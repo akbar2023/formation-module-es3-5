@@ -18,7 +18,7 @@ var blender = {
         };
     },
     mixerDesBooleens: function(x, y, z){
-        if("boolean" === typeof x && "boolean" === typeof y && "boolean" ===typeof z){
+        if("boolean" === typeof x && "boolean" === typeof y && "boolean" === typeof z){
             var message = "";
             if(x && y && z){
                 message = "Tout est vrai !";
