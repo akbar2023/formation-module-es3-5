@@ -19,7 +19,7 @@ var moyenneRecursive = function(){
         if (i < myArguments.length) {
             sum = sum + myArguments[i];
             i++;
-            return addSum(i, sum, myArguments);
+            return recursion(i, sum, myArguments);
         } else {
             return sum / i;
         }
