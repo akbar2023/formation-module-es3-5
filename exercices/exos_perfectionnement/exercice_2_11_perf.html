@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_2_11_perf</title>
+
+    <script>
+    "use strict";
+
+    var maFonction = function() {
+        console.log(arguments);
+        var nombres = 0;
+        for(var i = 0; i < arguments.length; i++){
+            nombres += arguments[i];
+            console.log(nombres);
+        }
+        alert("La moyenne des " + arguments.length + " arguments est : " + nombres / arguments.length);
+    }
+
+    maFonction(1, 5, 25, 125, 50, 1000, 8, 96, 566, 10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

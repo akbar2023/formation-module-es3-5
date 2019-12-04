@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4/8</title>
+</head>
+<body>
+
+
+    <script>
+    "use strict";
+
+    let monsieurDuguet = {
+        nom: "DUGUET",
+        prenom: "Vincent",
+        age: 50,
+        matiere: "Français",
+        presence: true,
+    }
+
+    let eleve1 = {
+        nom: "KHAN",
+        prenom: "Akbar",
+        age: 15,
+        presence: true,
+    }
+
+    let eleve2 = {
+        nom: "PHILIPPE",
+        prenom: "Pauline",
+        age: 14,
+        presence: true,
+    }
+
+    let eleve3 = {
+        nom: "LOPEZ",
+        prenom: "Laura",
+        age: 14,
+        presence: false,
+    }
+
+    let laTroisieme4 = {
+        nombre: 25,
+        specialite: monsieurDuguet.matiere,
+        enseignant: monsieurDuguet.nom,
+        eleves: [eleve1, eleve2, eleve3],
+    }
+
+    // for(let i = 0; i <= laTroisieme4.eleves.length - 1; i++) {
+    //     console.log("Je suis " + laTroisieme4.eleves[i].prenom + " " + laTroisieme4.eleves[i].nom + " et je suis présent(e)");
+    // }
+
+    for(let i = 0; i <= laTroisieme4.eleves.length - 1; i++) {
+        if(laTroisieme4.eleves[i].presence === true){
+        console.log("Je suis " + laTroisieme4.eleves[i].prenom + " " + laTroisieme4.eleves[i].nom + " et je suis présent(e)");
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>

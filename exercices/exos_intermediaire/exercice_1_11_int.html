@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice_1_11_int</title>
+
+    <script>
+
+        var dialogp1 = function () {
+            var saisie1;
+            do{
+                saisie1 = prompt("Saisissez un texte");
+                    saisie1 = saisie1.trim();
+                    // saisie1 = parseInt(saisie1);
+                    console.log(saisie1);
+            }while(null === saisie1 || saisie1 === "");
+
+            var saisie2;
+            do{
+                saisie2 = prompt("Saisissez un autre texte");
+                if(saisie2 !== null){
+                    saisie2 = saisie2.trim();
+                    // saisie2 = parseInt(saisie2);
+                }
+            }while(null === saisie2 || saisie2 === "");
+
+            // saisie1 = parseFloat(saisie1);
+            // saisie2 = parseFloat(saisie2);
+
+            alert(saisie1 + saisie2);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Titre Principal</h1>
+
+    <p onclick="dialogp1()">Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+    <p>Velit non sunt quae doloremque temporibus inventore.</p>
+
+</body>
+
+</html>

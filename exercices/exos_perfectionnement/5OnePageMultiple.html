@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trapy?</title>
+</head>
+
+<body>
+    <script>
+        const content = [
+            'A simple page, yet uncloseable',
+            'Always in a corner of your screen',
+            'So conspicuous, yet impalpable',
+            'Fortunately blocked by most',
+            'Giving you a well deserved rest'
+        ]
+        const finalContent = [
+            'A simple page, finally closeable',
+            'No more in a corner of your screen',
+            'Out of sight, out of mind',
+            'At last, can be forgotten',
+            'Giving you a well deserved rest'
+        ]
+        const boom = [
+            'Kaaaa',
+            'boooooooooo',
+            'mmmmm?',
+            '!!!',
+            'Kaboom!'
+        ]
+
+
+        const params = new URL(window.location).searchParams;
+        const index = parseInt(params.get('index') || '0');
+        const noPopup = params.get('noPopup');
+        const firstAgain = (index === 0 && window.location.search);
+
+        document.title = noPopup ? boom[index] : 'Trappy?';
+
+        function openPopup(query) {
+            const newURL = new URL(window.location);
+            newURL.searchParams.set('index', (index + 1) % content.length);
+            for (const key in query) {
+                newURL.searchParams.set(key, query[key]);
+            }
+
+            return open(newURL);
+        }
+
+        window.addEventListener('beforeunload', () => {
+            if (noPopup)
+                return;
+            if (firstAgain) {
+                for (let i = 0; i < content.length; ++i) {
+                    openPopup({
+                        index: i,
+                        noPopup: true
+                    });
+                }
+            } else {
+                openPopup();
+            }
+        })
+
+        if (noPopup)
+            document.body.innerText = finalContent[index];
+        else if (!firstAgain)
+            document.body.innerText = content[index];
+        else
+            document.body.innerText = content[index] + '?';
+    </script>
+
+</body>
+
+</html>

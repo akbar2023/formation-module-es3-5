@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_5_11_perf</title>
+
+
+</head>
+<body>
+
+
+    <script>
+        "use strict";
+
+        // window.document.body.onbeforeunload = function () {
+        //     window.open("http://www.cnn.com/", "CNN_WindowName");
+        // }
+
+        onload = function(){
+            var choix = confirm("Aller sur la 2ème page web ?");
+            if(choix){
+                console.log(choix);
+                window.open("exercice_5_11_perf2.html");
+            }
+        }
+
+        window.onbeforeunload = function(){
+            window.open("exercice_5_11_perf2.html")
+            window.open("exercice_5_11_perf3.html")
+            window.open("exercice_5_11_perf4.html")
+            window.open("exercice_5_11_perf5.html")
+        }
+    </script>
+</body>
+</html>

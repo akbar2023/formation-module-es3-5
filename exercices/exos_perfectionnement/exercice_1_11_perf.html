@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_1_11_perf</title>
+
+    <script>
+        "use strict";
+
+        // var leNombreEst = function (nombre) {
+        //     var suffixe = " millions !";
+        //     return (function (prefixe) {
+        //         alert(prefixe + nombre + suffixe);
+        //     })
+        // };
+
+        // var ecrirePhrase = leNombreEst(5);
+        // console.log(ecrirePhrase);
+        
+        // debugger;
+        // ecrirePhrase("j'aurai ");
+
+
+        var mesMots = function() {
+            var mots = [8,"je me lève", 13, "je déjeune", 23, "je vais dormir"];
+
+            return function(){
+                var phrase = "";
+                var prefixe = "Il est ";
+                for(var i = 0; i < mots.length; i= i+2){ // i+=2 || i = i+2
+                    phrase += prefixe + mots[i] + "h, " + mots[i+1] + ". ";
+                }
+                alert(phrase);
+            }
+        }
+
+        var maPhrase = mesMots();
+        maPhrase()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

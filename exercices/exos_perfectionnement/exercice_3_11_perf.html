@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_3_11_perf</title>
+
+    <script>
+        "use strict";
+
+
+        var saisies = prompt("Saisissez un nombre");
+        var tableau = [];
+
+        var i = 0
+        for (; saisies;) {
+            if (!isNaN(saisies)) {
+                saisies = parseFloat(saisies);
+                tableau[i] = saisies; // tableau.push(saisies)
+                i++;
+            }
+            saisies = prompt("Saisissez un nombre");
+        }
+        console.log(tableau);
+
+        var somme = 0;
+        for(let j = 0; j < tableau.length; j++){
+            somme = somme + tableau[j];
+        }
+
+        var moyenne = somme / tableau.length;
+        alert("La moyenne de vos nombre est : " + moyenne)
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

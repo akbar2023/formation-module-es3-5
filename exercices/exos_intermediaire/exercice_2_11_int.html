@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 2 / 11 intermediaire</title>
+
+    <script>
+    "use strict";
+
+    
+    var myFunction = function() {
+        let saisie = prompt("Saisissez un nombre");
+        saisie = parseFloat(saisie);
+
+        saisie = isNaN(saisie);
+        
+        if(saisie){
+            alert("La saisie n'est pas un nombre !");
+        }else{
+            alert("La saisie est un nombre après conversion !");
+        }
+        return saisie;
+    }
+    
+    window.onload = myFunction();
+
+
+    var dialog = function() {
+        let answer = prompt("Saisissez un nombre");
+
+        answer = parseFloat(answer);
+        console.log(answer);
+        // debugger;
+        do{
+            alert(" Vous devez saisir un nombre");
+            answer = prompt("Saisissez un nombre");
+            console.log(answer);
+        } while(isNaN(answer) || answer === null || answer === "");
+
+        alert("Merci Anne, Bonne séance de Pilate !")
+    }
+    
+    </script>
+</head>
+<body>
+
+    <h1>Anne est fatiguée !</h1>
+
+    <p onclick="dialog()">Pourquoi es-tu fatiguée, Anne ?</p>
+    <p>Clique sur le paragraphe au-dessus pour répondre</p>
+    
+</body>
+</html>

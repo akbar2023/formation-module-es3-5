@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_6_11_perf</title>
+</head>
+
+<body>
+
+    <script>
+
+        window.onload = function () {
+
+            do {
+
+                var answers = [
+                    "Lundi",
+                    "Mardi, Mercredi ou Jeudi",
+                    "Vendredi",
+                    "Samedi ou Dimanche",
+                    "Tu es né(e) le ",
+                    ", c'était une superbe journée !"
+                ];
+                var birthday = prompt("Which day of the week were you born? Day by number : (1-7)");
+                birthday = parseInt(birthday);
+                switch (birthday) {
+                    case 1:
+                        alert(answers[4] + answers[0] + answers[5]);
+                        debugger;
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        alert(answers[4] + answers[1] + answers[5]);
+                        break;
+                    case 5:
+                        alert(answers[4] + answers[2] + answers[5]);
+                        break;
+                    case 6 || 7:
+                        alert(answers[4] + answers[3] + answers[5]);
+                        break;
+                    default:
+                        text = "Looking forward to the Weekend";
+                }
+            } while (birthday > 7 || isNaN(birthday))
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1/8</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+        "use strict"
+
+
+        var schmilblick = {
+            taille: "grand",
+            dimensions: {
+                largeur: 2.5,
+                longueur: 3,
+                hauteur: 0.02
+            },
+            couleurs: [
+                "rouge",
+                "jaune",
+                "or",
+                "bleu"
+            ],
+            peutVoler: false,
+            matiere: "laine",
+            queSuisJe: function mystereEtBouleDeGomme() {
+                alert("A votre avis que suis-je ?");
+            }
+        };
+
+        console.log(schmilblick.taille);
+        console.log(schmilblick.matiere);
+        console.log(schmilblick.dimensions.longueur * schmilblick.dimensions.largeur);
+
+        let i = schmilblick.couleurs.length -1;
+        for(i; i >= 0; i--) {
+            console.log("Couleurs " + parseInt(i+1) + " : " + schmilblick.couleurs[i]);
+        }
+
+        schmilblick.peutVoler = true;
+        console.log("Schmilblick peut voler ? " + schmilblick.peutVoler);
+        schmilblick.estMagique = true;
+        console.log("Schmilblick est magique ? " + schmilblick.estMagique);
+        schmilblick.queSuisJe();
+    </script>
+</body>
+
+</html>

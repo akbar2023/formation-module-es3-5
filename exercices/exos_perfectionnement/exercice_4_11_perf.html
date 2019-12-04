@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_4_11_perf</title>
+
+    <script>
+        "use strict";
+        // 1)
+        // setTimeout(function(){
+        //     alert("Hello je suis en asynchrone !");
+        // }, 3000);
+  
+        // 2)
+        // setInterval(function(){
+        //     alert("Hello je suis en asynchrone !");
+        // }, 5000);
+
+        // 3)
+        window.onload = function () { 
+            var interval;        
+            window.document.body.children[0].onclick = function gestionDEvenement() {
+                interval = setInterval(function() {
+                    alert("Hello je suis async !");
+                }, 5000)
+            }
+            
+            window.document.body.children[1].onclick = function suppressionDEvenement() {
+                clearInterval(interval)
+                // console.log(interval);
+            }
+
+            
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <p>Clique sur moi pour afficher un message toutes les 5 secondes</p>
+    <p>Clique sur moi pour arrêter le popup</p>
+
+</body>
+
+</html>

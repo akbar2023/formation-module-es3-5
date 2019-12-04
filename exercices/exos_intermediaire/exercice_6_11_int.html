@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_6_11_int</title>
+
+    <script>
+    "use strict";
+
+    onload = function(){
+        let a,b,c,d;
+        var myArray = [a, b, c, d];
+
+        // debugger;
+        for(let i = 0; i < myArray.length; i++){
+            do{
+                myArray[i] = prompt("Sasissez qqch");
+            }while(myArray[i] === undefined || myArray[i] === "" || myArray[i] === null);
+            console.log(myArray);
+        }
+        
+        for(let j = 0; j < myArray.length; j++){
+            alert(myArray[j]);
+        }
+
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

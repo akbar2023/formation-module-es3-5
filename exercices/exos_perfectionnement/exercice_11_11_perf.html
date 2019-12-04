@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_11_11_perf</title>
+</head>
+<body>
+    
+    <script>
+        "use strict"
+
+        function arrayFunction () {
+        let numbers = [];
+            for (let args of arguments) {
+                numbers.push(args);
+                // let numLength = numbers.length;
+                // console.log(numbers);
+            }
+
+            for(let i = numbers.length-2; i>= 0; i--){
+                let rest;
+                for(let j = numbers.length-1; j>=0; j--){
+                        
+                    if(j) {
+                        console.log("Done!");
+                        // return
+                        };
+                    while(numbers[j] < numbers[i]){
+                        rest = numbers[j];
+                        numbers[j] = numbers[i];
+                        numbers[i] = rest;
+                        console.log(i + ' : ' + j)
+                    }
+                }
+            }
+            console.log(numbers);
+
+        }
+    </script>
+</body>
+</html>

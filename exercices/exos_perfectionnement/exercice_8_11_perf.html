@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice_8_11_perf</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+        do {
+            var myNumber = prompt("Saisissez un nombre entier.");
+            var length = 0; myNumber = parseInt(myNumber);
+            var saisie = myNumber;
+
+            for (myNumber; myNumber >= 1; myNumber = myNumber / 10) {
+                length++;
+            } 
+            if (myNumber === 0) {
+                length++;
+            }
+        } while (isNaN(myNumber));
+        alert("Le nombre entier : " + saisie + " Sa longueur : " + length);
+
+    </script>
+
+</body>
+
+</html>
