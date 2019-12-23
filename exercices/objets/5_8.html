@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>5/8 objets</title>
 </head>
+
 <body>
-  
+
 
   <script>
     "use strict"
 
-    var serialNumber,modelNumber,robotName,robotColor,robotMatter,robotGarantie;
+    var serialNumber, modelNumber, robotColor, robotMatter, robotGarantie;
 
-    function CreateRobot(serial, model = 2020, name, color, matter = 'Titanium', garantie = 10){
-      this.serial = serialNumber;
-      this.model = modelNumber;
-      this.name = robotName;
-      this.color = robotColor;
-      this.matter = robotMatter;
-      this.garantie = robotGarantie;
+    const everyone = {
+      array: [],
+      speak: function () {
+        this.array.forEach(obj => { obj.speak(); });
+      }
+    };
+
+    function Robot(serial, model = 2020, name, color, matter = 'Titanium', garantie = "10 years") {
+      this.serialNumber = serial;
+      this.modelNumber = model;
+      this.robotName = name;
+      this.robotColor = color;
+      this.robotMatter = matter;
+      this.robotGarantie = garantie;
+
+      everyone.array.push(this);
+    }
+
+    var r1 = new Robot(1, modelNumber, "Robot Boy", "Deep Sky Blue", robotMatter, robotGarantie);
+    var r2 = new Robot(2, modelNumber, "Bob", "Yellow", "Bisphenol A", robotGarantie);
+    var r3 = new Robot(3, modelNumber, "WALL-E", "White", robotMatter, robotGarantie);
+    var r4 = new Robot(4, modelNumber, "Ultron", "Grey", "Iron", robotGarantie);
+    var r5 = new Robot(5, modelNumber, "Lisa", "Beige", "Human Bot", robotGarantie);
+    var r6 = new Robot(6, modelNumber, "Mechagodzilla", "Black", robotMatter, robotGarantie);
+    var r7 = new Robot(7, modelNumber, "C-3PO", "Golden", "Gold", robotGarantie);
+    var r8 = new Robot(8, modelNumber, "C-3PO", "Beige", robotMatter, robotGarantie);
+    var r9 = new Robot(9, modelNumber, "Astro Boy", "Beige", robotMatter, robotGarantie);
+    var r10 = new Robot(10, modelNumber, "The T-1000", "Deep Sky Blue", robotMatter, robotGarantie);
+    var r11 = new Robot(11, modelNumber, "The T-800", "Terminator", robotMatter, robotGarantie);
+    var r12 = new Robot(12, modelNumber, "Robby the Robot", "Forbidden Planet", robotMatter, robotGarantie);
+
+    for(let i = 0; i < everyone.array.length; i++) {
+      console.log(everyone.array[i]);
+
+      // for(const bot in everyone.array){
+        console.log("Hey there is " + everyone.array[i.robotName]);
+      // }
     }
 
   </script>
 
 </body>
+
 </html>
