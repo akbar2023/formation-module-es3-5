@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,31 @@
     <title>exercice_6_11_int</title>
 
     <script>
-    "use strict";
+        "use strict";
 
-    onload = function(){
-        let a,b,c,d;
-        var myArray = [a, b, c, d];
+        onload = function () {
+            let a, b, c, d;
+            var myArray = [a, b, c, d];
 
-        // debugger;
-        for(let i = 0; i < myArray.length; i++){
-            do{
-                myArray[i] = prompt("Sasissez qqch");
-            }while(myArray[i] === undefined || myArray[i] === "" || myArray[i] === null);
-            console.log(myArray);
+            // debugger;
+            for (let i = 0; i < myArray.length; i++) {
+                do {
+                    myArray[i] = prompt("Sasissez qqch en " + (i+1) + " sur " + myArray.length);
+                    myArray[i] = myArray[i].trim();
+                } while (myArray[i] === undefined || myArray[i] === "" || myArray[i] === null);
+                console.log(myArray);
+            }
+
+            for (let j = 0; j < myArray.length; j++) {
+                alert(myArray[j]);
+            }
+
         }
-        
-        for(let j = 0; j < myArray.length; j++){
-            alert(myArray[j]);
-        }
-
-    }
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

@@ -10,7 +10,7 @@
     "use strict";
 
     
-    var myFunction = function() {
+    function myFunction() {
         let saisie = prompt("Saisissez un nombre");
         saisie = parseFloat(saisie);
 
@@ -27,19 +27,17 @@
     window.onload = myFunction();
 
 
-    var dialog = function() {
+    function dialog() {
         let answer = prompt("Saisissez un nombre");
 
         answer = parseFloat(answer);
         console.log(answer);
-        // debugger;
         do{
-            alert(" Vous devez saisir un nombre");
+            // alert(" Vous devez saisir un nombre");
             answer = prompt("Saisissez un nombre");
             console.log(answer);
         } while(isNaN(answer) || answer === null || answer === "");
 
-        alert("Merci Anne, Bonne séance de Pilate !")
     }
     
     </script>
