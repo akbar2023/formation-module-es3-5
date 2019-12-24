@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>6-8 objets</title>
+</head>
+
+<body>
+
+
+  <script>
+    "use strict";
+
+    var RobotBoy = {
+
+      serial: 1,
+      model: 2020,
+      name: "Robot Boy",
+      colour: "Midnight Blue",
+      matter: "Gabbro",
+      garanty: "100 years",
+      helloNumber: 0,
+      sayHello: function() {
+        alert("Hello human being ! I am " + this.name + " " + this.serial + "-" + this.model);
+        this.helloNumber++;
+        console.log(this.helloNumber);
+      }
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
