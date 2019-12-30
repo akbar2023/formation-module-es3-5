@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>6/23 DOM</title>
+</head>
+
+<body>
+
+  <h1>Titre principal</h1>
+  <ul>
+    <li>Premier point</li>
+    <li>Deuxième point</li>
+    <li>Troisième point</li>
+  </ul>
+  <div>
+    <div>
+      <h2><span>1</span>. Titre de la première section</h2>
+      <p id="p1"><span>1.1</span>. Premier paragraphe de la première section et un
+        <a href="#p1" onclick="moveP1()">lien</a>.
+      </p id="p1">
+      <p><span>1.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.</p>
+    </div>
+    <div>
+      <h2><span>2</span>. Titre de la deuxième section</h2>
+      <p id="p1"><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+      <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+    </div>
+    <div>
+      <h2><span>3</span>. Titre de la troisième section</h2>
+      <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+      <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('p1').style.backgroundColor = 'skyblue';
+    let margin = 0;
+    function moveP1() {
+      margin += 20;
+      document.getElementById('p1').style.marginLeft = margin + 'px';
+      console.log('margin-left: ' + margin + 'px');
+    }
+
+    /*
+    setInterval(function moveP1() {
+      margin += 2;
+      document.getElementById('p1').style.marginLeft = margin + 'px';
+      console.log('margin-left: '+margin + 'px');
+
+    }, 20)
+    */
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>20/23 DOM</title>
+</head>
+
+<body>
+
+  <script>
+
+    let lorem = 'Elle lui disait et redisait, et elle lui demandait, connaissant la miraculeuse réponse, lui demandait. Il lui disait et redisait et lui demandait, connaissant la miraculeuse réponse, lui demandait si elle.';
+
+    for(let i = 0; i < 100; i++){
+      window.document.body.innerHTML += lorem;
+    }
+
+    window.addEventListener('scroll', function (e) {
+      console.log('Hello');
+    });
+  </script>
+
+</body>
+
+</html>

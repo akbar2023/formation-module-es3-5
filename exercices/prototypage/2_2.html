@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2-2 Constructors</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    function Mammoth(age, weight, species, fur, gender) {
+      this.age = age,
+        this.weight = weight,
+        this.species = species,
+        this.fur = fur,
+        this.gender = gender,
+        this.trumpet = function () { return "????" }
+    }
+
+    Elephant = new Mammoth();
+
+    Elephant.cacahuetes = function () { console.log("Miaaam peanuts are soo yummmmy!!") }
+
+    for (prop in Elephant) {
+      if (typeof Elephant[prop] === 'function') {
+        const arg = prop + ' : ' + Elephant[prop]();
+        console.log(arg);
+      }
+      console.log(prop + ' : ' + Elephant[prop]);
+    }
+
+  </script>
+
+</body>
+
+</html>

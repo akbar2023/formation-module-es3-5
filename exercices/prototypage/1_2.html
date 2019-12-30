@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1/2 prototypage</title>
+</head>
+
+<body>
+
+  <script>
+
+    const AirBus = {
+
+      model: "Concorde",
+      capacity: 200,
+      price: 100,
+      passengers: [],
+      tank: 100,
+      color: ["white"],
+
+    }
+
+    const AirFrance = Object.create(Concorde);
+    const BritishAirways = Object.create(Concorde);
+
+    AirFrance.company = "Air France";
+    BritishAirways.company = "British Airways";
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2/23 DOM</title>
+</head>
+
+<body>
+
+  <p onclick="changeDOMTitle()">Change the Title clicking here</p>
+
+
+  <script>
+
+    console.log(window.navigator.appName);
+    console.log(window.navigator.userAgent);
+
+    let usedNav = navigator.userAgent;
+    if (usedNav.includes('Edge')) {
+      alert('So lame!');
+      window.open('https://www.mozilla.org/');
+    } else if (usedNav.includes('Chrome')) {
+      alert('Spy on Me!');
+      window.open('https://fr.wikipedia.org/wiki/Chromium');
+    } else {
+      console.log('Freed from Desire');
+    }
+
+    let originalTitle = window.document.title // 2/23 DOM
+    // window.document.title = "My JS exercices";
+
+    let newTitle = 'This is a new Title';
+
+    function changeDOMTitle() {
+      if (window.document.title === newTitle) {
+        window.document.title = originalTitle;
+      } else if(window.document.title === originalTitle) {
+        window.document.title = newTitle;
+      }
+    }
+
+    console.log(document.body.length);
+    console.log('---------------------------------------------------------------------------');
+    console.dir(document.body.length);
+
+    window.document.body.bgColor = 'skyblue';
+
+  </script>
+</body>
+
+</html>
