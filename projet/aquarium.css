@@ -1,0 +1,10 @@
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#aquarium {
+  background-image: linear-gradient(rgb(109, 189, 238), rgb(36, 118, 169));
+}
